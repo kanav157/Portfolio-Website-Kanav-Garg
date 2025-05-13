@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7pBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="home" class="portfolio-container" style="background: #262526; display: flex; flex-direction: column; align-items: center; padding: 20px; color: #fff;">
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            <div class="sidebar" id="sidebar">
+            <span class = "close-btn" id="close-btn">&times;</span>
+        <ul class="navlist">
+            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#about"><i class="fas fa-user"></i> About Me</a></li>
+            <li><a href="#project"><i class = "fas fa-book"></i> Project</a></li>
+            <li><a href="#contact"><i class="fas fa-phone"></i> Contact</a></li> 
+        </ul>
+    </div>
+
+    <div class = "navbar">
+        <ul class = "navbar-navlist">
+        <li><a href = "#home">Home</a></li>
+        <li><a href = "#about">About Me</a></li>
+        <li><a href = "#project">Project</a></li>
+        <li><a href = "#contact">Contact</a></li>
+    </ul>
+    </div>
+        <div class="contents" style="text-align: center; margin-top: 5rem;">
+            <p class="intro">Hi ! I am <span>Kanav Garg</span></p>
+            <h1>CODER AND STUDENT.</h1>
+            <p class="mainheading">Hello World !</p>
+            <p class="details">Welcome to my portfolio. Here, you'll find some of my projects that showcase my skills and passion.</p>
+            <p class="details">Want to know more about me? Feel free to explore, connect through my social media handles, or simply click the "Hire Me" button to get in touch.</p>
+            <div class = "mypic">
+                <img src="Mypic.PNG" alt = "Mypic" style="width:300px;height:200px">
+                
+            </div>
+            <div class="btns">
+                <button onclick="window.location.href='mailto:gargkanav757@gmail.com'">Hire Me</button>
+                <button onclick="window.location.href = '#project'">View Project</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" style="background: #262526; color: #fff; padding: 40px; text-align: center;">
+        <div class = "abt-info"></div>
+        <h2 style="color: deepskyblue;">About Me</h2>
+        <p>Hello! I'm <strong>Kanav Garg</strong>, a passionate coder and student dedicated to learning new technologies and building innovative projects. I thrive on solving complex problems and continuously improving my skills in web development, programming, and more.</p>
+        <p>When I'm not coding, you can find me exploring new tech trends, participating in coding challenges, and collaborating with others to bring creative ideas to life.</p>
+        <p>Thank you for visiting my portfolio. I hope you find my work inspiring and reflective of my dedication to technology and growth.</p>
+        
+        <div class="btns" style="margin-top: 20px;">
+            <button onclick="window.location.href='Kanav Garg Resume new (4).pdf'" target="_blank" style="color:#262526 text-decoration: none;">Click to View the Resume </button>
+        </div>
+    </section>
+
+
+    <!-- PROJECT SECTION -->
+    <section id="project" style="background: #262526; color: #fff; padding: 40px; text-align: center;">
+        <h2 style="color: deepskyblue;">Projects</h2>
+        <div class="project-gallery" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <div class="proj-img">
+                <a href="https://github.com/kanav157/DESKTOP-CLEANER" target="_blank">
+                <img src="desktopcleanerimg.png" alt="Desktop Cleaner" style="width: 300px; height: 200px; object-fit: cover; border-radius: 10px;">
+            </a>
+                <h3>Desktop Cleaner</h3>
+                <p>Manage your Desktop</p>
+            </div>
+            <div class="proj2-img">
+                <a href="https://github.com/kanav157/BILL-SPLITTER" target="_blank">
+                <img src="billsplitterimg.jpeg" alt="Bill Splitter" style="width: 300px; height: 200px; object-fit: cover; border-radius: 10px;">
+                </a>
+                <h3>Bill Splitter</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" style="background: #262526; color: #fff; padding: 40px; text-align: center;">
+        <h2 style="color: deepskyblue;">Let's Connect</h2>
+        <div class="social-links" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <a href="https://www.instagram.com/kanavgarg21" target="_blank" style="color: white; text-decoration: none;">Instagram</a>
+            <a href="https://www.linkedin.com/in/kanav-garg-7306392a7" target="_blank" style="color: white; text-decoration: none;">LinkedIn</a>
+            <a href="https://www.facebook.com/share/15j1JVmKQK/?mibextid=wwXIfr" target="_blank" style="color: white; text-decoration: none;">Facebook</a>
+            <a href="https://github.com/kanav157" target="_blank" style="color: white; text-decoration: none;">GitHub</a>
+        </div>
+    </section>
+    
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeBtn = document.getElementById('close-btn');
+
+        menuToggle.addEventListener('click',() =>{
+            sidebar.classList.add('active');
+        });
+
+        closeBtn.addEventListener('click',() =>{
+            sidebar.classList.remove('active');
+        });
+    </script>
+</body>
+
+</html>

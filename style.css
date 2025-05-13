@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    background-color: #262526;
+    color: white;
+}
+
+.portfolio-container {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #262526;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* === Navigation Bar === */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(38, 37, 38, 0.95);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.navlist {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.navlist a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1rem;
+    position: relative;
+}
+
+.navlist a::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.navlist a:hover::after {
+    width: 100%;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 3000;
+    cursor: pointer;
+}
+
+.navbar
+{
+    width: 100%;
+    background-color: #262526;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+.navbar-navlist
+{
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.navbar-navlist li a::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.navbar-navlist li a:hover::after {
+    width: 100%;
+}
+
+.navbar-navlist li a 
+{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 1.5rem;
+    transition: all;
+}
+
+.mypic img 
+{
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+
+}
+@media(max-width:768px)
+{
+    .navbar-navlist
+    {
+        display: none;
+    }
+}
+.sidebar {
+
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #1e1e1e;
+    color: white;
+    z-index: 2000;
+    padding: 2rem 1rem;
+    transition: left 0.3s ease;
+    box-shadow: 4px 0 10px rgba(0,0,0,0.3);
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar .close-btn {
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.sidebar .navlist {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+
+.sidebar .navlist a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s;
+}
+
+.sidebar .navlist a:hover {
+    background-color: #333;
+    border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navlist {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Other styles */
+.icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.icons .fa-brands {
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+.contents {
+    color: #fff;
+    text-align: center;
+}
+
+.contents .intro {
+    font-size: 4rem;
+}
+
+.contents .intro span {
+    color: deepskyblue;
+}
+
+.contents h1 {
+    font-size: 2.6rem;
+    color: deepskyblue;
+    font-weight: 200;
+}
+
+.contents .details {
+    font-size: 1.5rem;
+    max-width: 38rem;
+    margin: 1.1rem auto 3rem auto;
+    line-height: 1.8rem;
+}
+
+.btns button {
+    border: 1px solid lightblue;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+    margin: 0.5rem;
+}
+
+button:nth-child(1) {
+    background-color: deepskyblue;
+    color: #262526;
+}
+
+button:nth-child(2) {
+    background-color: transparent;
+    color: deepskyblue;
+}
+
+button:nth-child(1):hover {
+    background: transparent;
+    color: deepskyblue;
+}
+
+button:nth-child(2):hover {
+    background-color: deepskyblue;
+    color: #262526;
+}
+
+.mainheading {
+    font-size: 2.5rem;
+}
+
+#about, #contact, #project {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #262526;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.3rem;
+    line-height: 1.8;
+}
+
+#about p {
+    margin-bottom: 1rem;
+}
+
+#about h2,
+#project h2,
+#contact h2 {
+    font-size: 2.5rem;
+}
+
+.project-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.proj-img img,
+.proj2-img img {
+    background-color: #333;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.proj-img img:hover {
+    transform: scale(1.1);
+    height: 300px;
+}
+
+.proj2-img img:hover {
+    transform: scale(1.1);
+    height: 200px;
+}
+
+.mypic img
+{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+
+    
+}
+@media (max-width: 1024px) and (max-height: 600px) {
+    .contents .intro {
+        font-size: 2.5rem;
+    }
+
+    .contents h1 {
+        font-size: 2rem;
+    }
+
+    .contents .detail {
+        font-size: 1.2rem;
+    }
+
+    .btns button {
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
+    }
+}
